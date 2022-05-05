@@ -51,5 +51,11 @@
 @import url(./blocks/popup/__title/_type/popup__title_type_auth.css);
 @import url(./blocks/popup/__input/_type/popup__input_type_auth.css);
 @import url(./blocks/button/_type/button_type_submit-auth.css);
+@import url(./blocks/nav-bar/nav-bar.css);
+@import url(./blocks/popup/__container/_type/popup__conteiner_type_registr.css);
+@import url(./blocks/popup/__register-image/popup__register-image.css);
+@import url(./blocks/popup/__register-text/popup__register-text.css);
+@import url(./blocks/link/link.css);
+
 
 

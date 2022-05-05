@@ -1,9 +1,10 @@
 import React from "react"; 
 import AuthForm from "./AuthForm"; 
+import {Link} from 'react-router-dom'
 
 
 
-function Login ({ handleAuth }) {
+function Register ({ handleAuth }) {
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
 
@@ -16,7 +17,6 @@ function Login ({ handleAuth }) {
     setPassword(e.target.value)
   }
 
-
   function handleSubmitAuth (e) {
     e.preventDefault()
     handleAuth(email, password)
@@ -25,12 +25,15 @@ function Login ({ handleAuth }) {
   
 
   return (
-    <AuthForm handleSubmit={handleSubmitAuth} title="Вход" buttonText="Войти"  >
+    <>
+    <AuthForm handleSubmit={handleSubmitAuth} title="Регистрация" buttonText="Зарегистрироваться"  >
         <input className="popup__input popup__input_type_auth" placeholder="Email" value={email || ''} onChange={changeEmail} ></input>
         <input className="popup__input popup__input_type_auth" placeholder="Пароль" value={password || ''} onChange={changePassword}></input>
     </AuthForm>
+    <p className="popup__register-text">Уже зарегистрированы? <Link className="link" to="/sign-in" >Войти</Link> </p>
+    </>
 
   )
 }
 
-export default Login;
+export default Register;
