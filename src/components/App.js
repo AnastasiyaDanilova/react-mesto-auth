@@ -91,16 +91,13 @@ function App() {
     // редактирование: хук + с авторизацией, профиль, аватар
     React.useEffect(() => {
         useCheckToken()
-        if (loggedIn) {
-            history.push('/')
             Promise.all([api.getProfile(), api.getInitialCards()])
                 .then(([userInfo, cardList]) => {
                     setСurrentUser(userInfo);
                     setСards(cardList);
                 }).catch((res) => console.log(res));
             return
-        }
-    }, [loggedIn]);
+    }, []);
 
     function handleUpdateUser(user) {
         api.editProfile(user.name, user.about).then((res) => {
@@ -177,6 +174,7 @@ function App() {
                         email: res.data.email
                     })
                     setLoggedIn(true);
+                    history.push('/')
                 }
             }).catch((res) => console.log(res));
         };

@@ -21,7 +21,7 @@ function Login({ handleAuth }) {
   return (
     <AuthForm handleSubmit={handleSubmitAuth} title="Вход" buttonText="Войти"  >
       <input className="popup__input popup__input_type_auth" placeholder="Email" value={email || ''} onChange={changeEmail} ></input>
-      <input className="popup__input popup__input_type_auth" placeholder="Пароль" value={password || ''} onChange={changePassword}></input>
+      <input className="popup__input popup__input_type_auth" type="password" placeholder="Пароль" value={password || ''} onChange={changePassword}></input>
     </AuthForm>
 
   )
