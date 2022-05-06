@@ -1,8 +1,7 @@
-import React from "react"; 
+import React from "react";
 
 
-function AuthForm ({ title, buttonText, children, handleSubmit}) {
-
+function AuthForm({ title, buttonText, children, handleSubmit }) {
   return (
     <div className="popup__container popup__container_type_auth">
       <h1 className="popup__title popup__title_type_auth">{title}</h1>
