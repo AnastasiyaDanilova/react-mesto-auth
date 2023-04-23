@@ -38,8 +38,3 @@ Mesto - это сервис обмена фотографиями. Куда мо
 * Попап-предупреждение об удалении карточки
     
 * Валидация всех форм
-
-
-**Git-Pages**
-
-* [Ссылка на Git-Pages](https://anastasiyadanilova.github.io/mesto-react/)
